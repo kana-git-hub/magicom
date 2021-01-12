@@ -13,8 +13,8 @@
 		customClass: "",
 		label: true,
 		labels: {
-			closed: "Navigation",
-			open: "Close"
+			closed: "MENU",
+			open: "CLOSE"
 		},
 		maxWidth: "980px"
 	};

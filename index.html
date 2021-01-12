@@ -21,18 +21,26 @@
     $(function() {
       // #で始まるリンクをクリックしたら実行されます
       $('a[href^="#"]').click(function() {
-        var speed = 1200;
         var href = $(this).attr("href");
         var target = $(href == "#" || href == "" ? 'html' : href);
         var position = target.offset().top;
-        $('body,html').animate({
-          scrollTop: position
-        }, speed, 'swing');
-        return false;
+        $('body,html')
+          .animate( { scrollTop : position }, 2000, 'swing');
       });
+      
+        $(document).on('click','.gNav-list a',function() {
+        $('.naver-wrapper').attr('style','height: 0px');
+        $('nav').toggleClass('open');
+        $('.naver-handle')
+          .delay( 4500 )
+          .queue(function () {
+            $(this).html('MENU');
+            }).dequeue();
+            return false;
+            //return falseとした場合は親要素へのイベント伝播は止まる
+        });
     });
   </script>
-
 <!--以下ScrollReveal-->
   <script>
     $(function() {
@@ -42,12 +50,13 @@
       });
     });
   </script>
+  
 </head>
 
 <body>
   <div class="wrapper clearfix">
     <header>
-      <nav class="clearfix">
+      <nav>
           <ul class="gNav-list clearfix">
             <li><a href="#sec1">CONCEPT</a></li>
             <li><a href="#sec2">LINE UP</a></li>
@@ -58,8 +67,7 @@
           </ul>
       </nav>
     </header>
-
-
+    
     <main>
       <div class="top-container">
         <div class="h-box">
@@ -97,16 +105,16 @@
              <p>
                 <img src="images/lineUp-01.jpg" width="450" height="350" alt="#">
               </p>
-              <h3>ダミーテキスト</h3>
-              <p class="lineUp-text">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+              <h3>革のシューズ</h3>
+              <p class="lineUp-text">個性的な質感が目を引く洗練されたエレガントなメンズ・レディース製品は、世界へと広まっていきました。</p>
             </div><!--/content-left-->
 
             <div class="content content-center lineUp-card">
               <p>
                 <img src="images/lineUp-02.jpg" width="450" height="350" alt="#">
               </p>
-              <h3>ダミーテキスト</h3>
-              <p class="lineUp-text">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+              <h3>革財布・レザーウォレット</h3>
+              <p class="lineUp-text">定番で人気の二つ折り財布や長財布、小銭入れ(レザーコインケース)、マネークリップなど幅広い種類の財布があります。
               </p>
             </div><!--/content-->
             
@@ -114,8 +122,8 @@
               <p>
                 <img src="images/lineUp-03.jpg" width="450" height="350" alt="#">
               </p>
-              <h3>ダミーテキスト</h3>
-              <p class="lineUp-text">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+              <h3>ロールトップバックパック</h3>
+              <p class="lineUp-text">日々鞄を製作している作り手自身がデザインしています。枠にとらわれない自由な発想で作られるカバンや小物たちはどれもmagicomならではのデザインです。
               </p>
             </div><!--/content-->
           </div><!--/container-->
@@ -300,7 +308,7 @@
                   </tr>
                   <tr>
                     <th class="none"></th>
-                    <td><input type="text" name="address-level2" id="address-level2" size="40" autocomplete="address-level2" placeholder="市区町村" required>
+                    <td><input type="text" name="address-level2" id="address-level2" size="40" autocomplete="address-level2" placeholder="市区町村・番地" required>
                     </td>
                   </tr>
                   <tr>
@@ -373,26 +381,29 @@
     <footer>
       <div class="footer-nav clearfix">
         <ul>
-          <li><a href="#top">サイトマップ</a></li>
+          <li><a href="#">サイトマップ</a></li>
           <li><a href="#">オンラインストア</a></li>
           <li><a href="#">プライバシーポリシー</a></li>
         </ul>
       </div><!--/footer-nav-->
-      <p><small>&copy;2020 majicom All Rights Reserved.</small></p>
+      <p><small>&copy;2021 magicom All Rights Reserved.</small></p>
     </footer>
   </div><!--/wrapper-->
   
 <link rel="stylesheet" href="css/jquery.fs.naver.css">
 <script src="js/jquery.fs.naver.js"></script>
 <script>
-$(document).ready(function() {
+$(function() {
   $("nav").naver({
     labels: {
       closed: "MENU",
       open: "CLOSE"
     },
-    maxWidth: "480px"
+    maxWidth: "480px",
   });
+  
+
 });
+  
 </script>
 </body></html>
