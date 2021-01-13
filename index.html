@@ -19,65 +19,65 @@
   <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
   <script>
     $(function() {
-      // #で始まるリンクをクリックしたら実行されます
+      // #で始まるリンクをクリックしたら実行される
       $('a[href^="#"]').click(function() {
         var href = $(this).attr("href");
         var target = $(href == "#" || href == "" ? 'html' : href);
         var position = target.offset().top;
         $('body,html')
-          .animate( { scrollTop : position }, 2000, 'swing');
+          .animate({
+            scrollTop: position
+          }, 2000, 'swing');
       });
-      
-        $(document).on('click','.gNav-list a',function() {
-        $('.naver-wrapper').attr('style','height: 0px');
+
+      $(document).on('click', '.gNav-list a', function() {
+        $('.naver-wrapper').attr('style', 'height: 0px');
         $('nav').toggleClass('open');
         $('.naver-handle')
-          .delay( 4500 )
-          .queue(function () {
+          .queue(function() {
             $(this).html('MENU');
-            }).dequeue();
-            return false;
-            //return falseとした場合は親要素へのイベント伝播は止まる
-        });
-    });
-  </script>
-<!--以下ScrollReveal-->
-  <script>
-    $(function() {
-      ScrollReveal().reveal('section', {
-        duration: 2500, //アニメーションの完了にかかる時間
-        reset: true, //viewportを離れる時に初期化された位置に戻る要素を有効/無効にする
+          }).dequeue();
+        return false;
+        //return falseとした場合は親要素へのイベント伝播は止まる
       });
     });
   </script>
-  
+  <script>// ScrollReveal
+    $(function() {
+      ScrollReveal().reveal('section', {
+        duration: 2500,
+        reset: true,
+      });
+    });
+  </script>
 </head>
 
 <body>
   <div class="wrapper clearfix">
+    
     <header>
       <nav>
-          <ul class="gNav-list clearfix">
-            <li><a href="#sec1">CONCEPT</a></li>
-            <li><a href="#sec2">LINE UP</a></li>
-            <li><a href="#sec3">SERVICE</a></li>
-            <li><a href="#sec4">CATALOG</a></li>
-            <li><a href="#sec5">MOVIE</a></li>
-            <li><a href="#sec6">ACCESS</a></li>
-          </ul>
+        <ul class="gNav-list clearfix">
+          <li><a href="#sec1">CONCEPT</a></li>
+          <li><a href="#sec2">LINE UP</a></li>
+          <li><a href="#sec3">SERVICE</a></li>
+          <li><a href="#sec4">CATALOG</a></li>
+          <li><a href="#sec5">MOVIE</a></li>
+          <li><a href="#sec6">ACCESS</a></li>
+        </ul>
       </nav>
     </header>
-    
+        <p class="to-top">▲</p>
     <main>
       <div class="top-container">
         <div class="h-box">
           <h1>
             <div class="logo">
-                <img src="images/logo-top.svg" width="700" height="200" alt="マジコムのロゴ画像です。magicomは手作り革小物を販売しています。">
+              <img src="images/logo-top.svg" width="700" height="200" alt="マジコムのロゴ画像です。magicomは手作り革小物を販売しています。">
             </div>
           </h1>
         </div><!--/h-box-->
-        
+
         <div class="b-img">
           <img src="images/top-view.jpg" width="1280" height="854" alt="マジコムの店内の写真です。">
         </div>
@@ -88,12 +88,12 @@
           <h2>CONCEPT<br>
             <span>コンセプト</span>
           </h2>
-            <p class="concept-text">
-              「 magic 」×「 moment 」<br>
-              職人がひとつひとつ、ていねいに。<br>
-              手にした瞬間、魔法がかかったように。<br>
-              心にときめく商品に出会えますように──。<br>
-              magicomはあなたに長く寄り添える、高品質をお届けします。</p>
+          <p class="concept-text">
+            「 magic 」×「 moment 」<br>
+            職人がひとつひとつ、ていねいに。<br>
+            手にした瞬間、魔法がかかったように。<br>
+            心にときめく商品に出会えますように──。<br>
+            magicomはあなたに長く寄り添える、高品質をお届けします。</p>
         </section><!--/concept-->
 
         <section class="lineUp clearfix" id="sec2">
@@ -102,8 +102,8 @@
           </h2>
           <div class="container clearfix">
             <div class="content content-left lineUp-card">
-             <p>
-                <img src="images/lineUp-01.jpg" width="450" height="350" alt="#">
+              <p>
+                <img src="images/lineUp-01.jpg" width="450" height="350" alt="革のシューズ">
               </p>
               <h3>革のシューズ</h3>
               <p class="lineUp-text">個性的な質感が目を引く洗練されたエレガントなメンズ・レディース製品は、世界へと広まっていきました。</p>
@@ -111,16 +111,17 @@
 
             <div class="content content-center lineUp-card">
               <p>
-                <img src="images/lineUp-02.jpg" width="450" height="350" alt="#">
+                <img src="images/lineUp-02.jpg" width="450" height="350" alt="革財布・レザーウォレット">
               </p>
               <h3>革財布・レザーウォレット</h3>
               <p class="lineUp-text">定番で人気の二つ折り財布や長財布、小銭入れ(レザーコインケース)、マネークリップなど幅広い種類の財布があります。
               </p>
-            </div><!--/content-->
-            
+            </div>
+            <!--/content-->
+
             <div class="content content-right lineUp-card">
               <p>
-                <img src="images/lineUp-03.jpg" width="450" height="350" alt="#">
+                <img src="images/lineUp-03.jpg" width="450" height="350" alt="ロールトップバックパック">
               </p>
               <h3>ロールトップバックパック</h3>
               <p class="lineUp-text">日々鞄を製作している作り手自身がデザインしています。枠にとらわれない自由な発想で作られるカバンや小物たちはどれもmagicomならではのデザインです。
@@ -135,15 +136,15 @@
           </h2>
           <div class="container clearfix">
             <div class="content content-left store-card">
-                <p>
-                  <img src="images/lineUp-01.jpg" width="450" height="350" alt="#">
+              <p>
+                <img src="images/lineUp-01.jpg" width="450" height="350" alt="#">
               </p>
               <h3>お手伝い</h3>
               <p class="store-text">いつもと違った服を身につけたいのに、何が似合うか分からないあなたに。magicomでは、スタッフが全身コーディネートのご提案をさせていただきます。</p>
             </div><!--/content-->
             <div class="content content-right store-card">
-                <p>
-                  <img src="images/lineUp-01.jpg" width="450" height="350" alt="#">
+              <p>
+                <img src="images/lineUp-01.jpg" width="450" height="350" alt="#">
               </p>
               <h3>サイズ調整</h3>
               <p class="store-text">ご来店時に当店ご購入の服をお持ちいただくと、お身体に合わなくなったお洋服を必要に応じてお客様の身体に合うよう調整いたします。</p>
@@ -304,7 +305,7 @@
                   </tr>
                   <tr>
                     <th class="none"></th>
-                    <td><input type="text" name="address-level1" id="address-level1" size="40" autocomplete="address-level1"  placeholder="都道府県" required></td>
+                    <td><input type="text" name="address-level1" id="address-level1" size="40" autocomplete="address-level1" placeholder="都道府県" required></td>
                   </tr>
                   <tr>
                     <th class="none"></th>
@@ -334,13 +335,13 @@
           <h2>STORE MOVIE<br>
             <span>ストア紹介動画</span>
           </h2>
-<!--動画埋め込み-->
+<!--動画埋め込みここから-->
           <div class="movie-box">
             <video src="store-movie.mp4" poster="#" playsinline autoplay muted controls width="622" height="350"></video>
           </div><!--/movie-box-->
 <!--動画ここまで-->
         </section><!--/storeMovie-->
-        
+
         <section class="storeaccess" id="sec6">
           <h2>STORE ACCESS<br>
             <span>ストア 住所</span>
@@ -358,18 +359,18 @@
                 </dl>
               </address>
             </div><!--/access-list-->
-            
+
             <div class="access-map">
               <div class="map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.8243169882194!2d139.73249571487253!3d35.65669983892511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b9f085e9215%3A0x55c1efce67ad53c4!2z44CSMTA2LTAwNDUg5p2x5Lqs6YO95riv5Yy66bq75biD5Y2B55Wq77yR5LiB55uu!5e0!3m2!1sja!2sjp!4v1606216538341!5m2!1sja!2sjp" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.8243169882194!2d139.73249571487253!3d35.65669983892511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b9f085e9215%3A0x55c1efce67ad53c4!2z44CSMTA2LTAwNDUg5p2x5Lqs6YO95riv5Yy66bq75biD5Y2B55Wq77yR5LiB55uu!5e0!3m2!1sja!2sjp!4v1606216538341!5m2!1sja!2sjp" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
               </div><!--/map-->
             </div><!--/access-map-->
           </div><!--/access-box-->
           <div class="sns-box">
             <ul>
-              <li><a href="#"><i class="fab fa-facebook-f fa-2x"></i><!--Facebook--></a></li>
-              <li><a href="#"><i class="fab fa-twitter fa-2x"></i><!--Twitter--></a></li>
-              <li><a href="#"><i class="fab fa-instagram fa-2x"></i><!--Instagram--></a></li>
+              <li><a href="#"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter fa-2x"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram fa-2x"></i></a></li>
             </ul>
           </div><!--/sns-box-->
         </section><!--/storeMovie-->
@@ -379,6 +380,7 @@
     <hr>
 
     <footer>
+      
       <div class="footer-nav clearfix">
         <ul>
           <li><a href="#">サイトマップ</a></li>
@@ -389,21 +391,53 @@
       <p><small>&copy;2021 magicom All Rights Reserved.</small></p>
     </footer>
   </div><!--/wrapper-->
-  
-<link rel="stylesheet" href="css/jquery.fs.naver.css">
-<script src="js/jquery.fs.naver.js"></script>
-<script>
-$(function() {
-  $("nav").naver({
-    labels: {
-      closed: "MENU",
-      open: "CLOSE"
-    },
-    maxWidth: "480px",
-  });
-  
 
-});
-  
-</script>
+  <link rel="stylesheet" href="css/jquery.fs.naver.css">
+  <script src="js/jquery.fs.naver.js"></script>
+  <script>// ハンバーガーメニュー
+    $(function() {
+      $("nav").naver({
+        labels: {
+          closed: "MENU",
+          open: "CLOSE"
+        },
+        maxWidth: "480px",
+      });
+    });
+  </script>
+  <script>// 戻るボタン
+    $(function() {
+      var topBtn = $('.to-top');
+      topBtn.hide();
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+          topBtn.fadeIn();
+        } else {
+          topBtn.fadeOut();
+        }
+      });
+      $(window).scroll(function() {
+        var height = $(document).height(); //ドキュメントの高さ
+        var position = $(window).height() + $(window).scrollTop(); //ページトップから現在地までの高さ
+        var footer = $("footer").height();
+        if (height - position < footer) {
+          topBtn.css({
+            position: "fixed",
+            bottom: 170
+          });
+        } else {
+          topBtn.css({
+            position: "fixed",
+            top: "auto"
+          });
+        }
+      });
+      topBtn.click(function() {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 500);
+        return false;
+      });
+    });
+  </script>
 </body></html>

@@ -7,13 +7,13 @@ body {
 /* wrapper
 -------------------------------------------*/
 .wrapper {
-  margin: 0 auto;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1440px;
+  margin: 0 auto;
   position: relative;
 }
 
-/* 文字の間隔設定
+/* lettar-spacing
 -------------------------------------------*/
 nav a,
 footer a {
@@ -25,24 +25,24 @@ h2 {
 
 /* nav
 -------------------------------------------*/
-
-nav {
-  width: 100%;
-  height: 60px;
+header {
   background-color: #fff;
   position: fixed;
-  z-index: 1000;
-  top: 0;
+  z-index: 100;
+  width: 100%;
+  max-width: 1440px;
+  height: 60px;
 }
 
 ul.gNav-list li {
   width: calc(100% / 6);
+  box-sizing: border-box;
   float: left;
 }
 
 ul.gNav-list li a {
-  font-size: 0.8em;
   display: block;
+  font-size: 0.8em;
   color: #000;
   line-height: 60px;
   text-align: center;
@@ -79,10 +79,10 @@ ul.gNav-list li a:hover {
 .b-img img {
   width: 100%;
   height: auto;
-  margin-top: 60px;
+  padding-top: 60px;
 }
 
-/* section共通
+/* section,common
 -------------------------------------------*/
 h2 {
   font-size: 3em;
@@ -114,7 +114,6 @@ section {
 
 .lineUp {
   background-image: url(../images/lineUp-back.jpg);
-/*  padding-top: 20px;*/
 }
 
 .content h3 {
@@ -179,7 +178,7 @@ section {
   background-color: #f0ece6;
   margin-right: 0;
   margin-left: 0;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
 .catalog-box {
@@ -200,6 +199,7 @@ p.catalog-txt {
 -------------------------------------------*/
 .form-box {
   width: 90%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -345,7 +345,7 @@ address dd {
   color: #e6e5ef;
 }
 
-/* 水平線
+/* hr
 -------------------------------------------*/
 
 hr {
@@ -362,6 +362,7 @@ hr {
 footer {
   height: 100px;
   text-align: center;
+  position: relative;
 }
 
 .footer-nav {
@@ -394,7 +395,27 @@ footer p {
   clear: left;
 }
 
-/* タブレット用
+/* pagetop
+-------------------------------------------*/
+
+.to-top{
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  right: 0;
+  bottom: 0;
+  font-size: 32px;
+  color: #fff;
+  background: #9c9c9f;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* max-width:768px
 -------------------------------------------*/
 @media screen and (max-width:768px) {
 
@@ -504,13 +525,15 @@ footer p {
 }
 }
 
-/* スマーフォン用
+/* max-width: 480px
 -------------------------------------------*/
 
 @media screen and (max-width: 480px) {
 
   h2 {
     font-size: 25px;
+    margin: 0;
+    margin: 20px;
   }
   
   .concept-text {
@@ -573,6 +596,11 @@ footer p {
   footer ul li a {
     font-size: 10px;
     color: #000;
+}
+  .to-top{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
 }
 }
 
