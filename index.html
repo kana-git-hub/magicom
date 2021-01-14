@@ -415,22 +415,8 @@
         } else {
           topBtn.fadeOut();
         }
-      });
-      $(window).scroll(function() {
         var height = $(document).height(); //ドキュメントの高さ
         var position = $(window).height() + $(window).scrollTop(); //ページトップから現在地までの高さ
-        var footer = $("footer").height();
-        if (height - position < footer) {
-          topBtn.css({
-            position: "fixed",
-            bottom: 170
-          });
-        } else {
-          topBtn.css({
-            position: "fixed",
-            top: "auto"
-          });
-        }
       });
       topBtn.click(function() {
         $('body,html').animate({
