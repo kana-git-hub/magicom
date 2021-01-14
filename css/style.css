@@ -141,7 +141,7 @@ section {
 .lineUp img {
   width: 100%;
   vertical-align: bottom;
-  box-shadow: 0 0 8px #ccc;
+  box-shadow: 3px 5px 22px rgba(0,0,0,0.4);
 }
 
 /* section.storeService
@@ -164,7 +164,7 @@ section {
   width: 100%;
   height: auto;
   vertical-align: bottom;
-  box-shadow: 0 0 8px #ccc;
+  box-shadow: 3px 5px 22px rgba(0,0,0,0.4);
 }
 .store-text {
   text-align: justify;
@@ -186,7 +186,7 @@ section {
 }
 
 .catalog-box img {
-  box-shadow: 0 0 8px #ccc;
+  box-shadow: 3px 5px 22px rgba(0,0,0,0.1);
 }
 
 p.catalog-txt {
@@ -239,6 +239,10 @@ td {
   padding: 10px;
 }
 
+select {
+  width: calc(100% / 4);
+}
+
 /* submit
 -------------------------------------------*/
 .submit-btn {
@@ -259,8 +263,8 @@ input[type="submit" i] {
   font-size: 1em;
   margin-top: 20px;
   opacity: 1;
-  border-bottom: solid 5px #9c9c9f;
-  border-radius: 3px;
+  border-bottom: solid 5px #616060;
+  border-radius: 30px;
 }
 
 input[type="submit" i]:hover {
@@ -271,7 +275,7 @@ input[type="submit" i]:hover {
 input[type="submit" i]:active {
   position: relative;
   top: 5px;
-  border-bottom: none;
+  border-bottom: initial;
 }
 
 textarea {
@@ -295,7 +299,7 @@ textarea {
   width: 100%;
   max-width: 622px;
   height: auto;
-  box-shadow: 0 0 8px #ccc;
+  box-shadow: 3px 5px 22px rgba(0,0,0,0.4);
 }
 
 /* section.storeaccess
@@ -406,8 +410,8 @@ footer p {
   justify-content: center;
   width: 80px;
   height: 80px;
-  right: 0;
-  bottom: 0;
+  right: 10px;
+  bottom: 10px;
   font-size: 32px;
   color: #fff;
   background: #9c9c9f;
@@ -596,10 +600,14 @@ footer p {
   footer ul li a {
     font-size: 10px;
     color: #000;
-}
+  }
+  
+  footer p {
+    margin-bottom: 15px;
+  }
   .to-top{
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     font-size: 20px;
 }
 }
