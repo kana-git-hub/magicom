@@ -79,8 +79,9 @@ header {
 /* main
 -------------------------------------------*/
 .topContainer {
-  background-image: url(/images/top-view.jpg);
+  background-image: url(../images/top-view.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   height: 85vh;
 
   &__img {
@@ -124,11 +125,11 @@ section {
 -------------------------------------------*/
 
 .lineUp {
+  background-image: url(../images/lineUp-back.jpg);
+
   &__ja {
     @include TitlleJa();
   }
-
-  background-image: url(/images/lineUp-back.jpg);
 
   &__inner {
     display: flex;

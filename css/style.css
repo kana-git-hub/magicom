@@ -61,8 +61,9 @@ header {
 /* main
 -------------------------------------------*/
 .topContainer {
-  background-image: url(/images/top-view.jpg);
+  background-image: url(../images/top-view.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   height: 85vh;
 }
 
@@ -109,7 +110,7 @@ section {
 /* section.lineUp
 -------------------------------------------*/
 .lineUp {
-  background-image: url(/images/lineUp-back.jpg);
+  background-image: url(../images/lineUp-back.jpg);
 }
 
 .lineUp__ja {
