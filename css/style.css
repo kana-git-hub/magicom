@@ -82,7 +82,7 @@ header {
 
 .topContainer__img img {
   width: 100%;
-  max-width: 60%;
+  max-width: 70%;
   height: auto;
 }
 
@@ -526,6 +526,13 @@ footer ul li:last-child a {
 /* max-width: 480px
 -------------------------------------------*/
 @media screen and (max-width: 480px) {
+  .nav__list {
+    display: block;
+  }
+  .nav__list a {
+    font-size: 15px;
+    text-align: center;
+  }
   section > h2 {
     font-size: 25px;
     margin: 20px;
@@ -561,6 +568,7 @@ footer ul li:last-child a {
   }
   .form-box h3 {
     font-size: 20px;
+    margin: 40px 0;
   }
   table {
     font-size: 12px;
@@ -575,6 +583,14 @@ footer ul li:last-child a {
   input[type="submit"] {
     font-size: 14px;
     width: 100%;
+    color: #000;
+    height: 60px;
+    border-radius: 30px;
+    background: #fff;
+  }
+  input[type="submit"]:hover {
+    color: #000;
+    background: #fff;
   }
   address dd {
     font-size: 16px;

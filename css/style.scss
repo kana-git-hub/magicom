@@ -92,7 +92,7 @@ header {
 
     img {
       width: 100%;
-      max-width: 60%;
+      max-width: 70%;
       height: auto;
     }
   }
@@ -517,6 +517,16 @@ footer {
 -------------------------------------------*/
 
 @media screen and (max-width: 480px) {
+
+  .nav__list {
+    display: block;
+
+    a {
+      font-size: 15px;
+      text-align: center;
+    }
+  }
+
   section>h2 {
     font-size: 25px;
     margin: 20px;
@@ -569,6 +579,7 @@ footer {
 
   .form-box h3 {
     font-size: 20px;
+    margin: 40px 0;
   }
 
   table {
@@ -587,6 +598,16 @@ footer {
   input[type="submit"] {
     font-size: 14px;
     width: 100%;
+    color: #000;
+    height: 60px;
+    border-radius: 30px;
+    background: #fff;
+
+    &:hover {
+      color: #000;
+      background: #fff;
+    }
+
   }
 
   address dd {
