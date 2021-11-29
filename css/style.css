@@ -61,29 +61,23 @@ header {
 /* main
 -------------------------------------------*/
 .topContainer {
-  background-image: url(../images/top-view.jpg);
+  background: url(../images/top-view.jpg) no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-position-y: 60px;
+  width: 100%;
   height: 85vh;
-}
-
-.topContainer__img {
-  height: 85vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding-top: 60px;
+  position: relative;
 }
 
 .topContainer__img img {
   width: 100%;
-  max-width: 60%;
-  height: auto;
+  max-width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 /* section,common
@@ -102,7 +96,7 @@ section {
 }
 
 .concept__text {
-  font-size: 2.4em;
+  font-size: 2rem;
   line-height: 3em;
   text-align: center;
 }
@@ -516,16 +510,33 @@ footer ul li:last-child a {
     font-size: 16px;
     width: 80%;
   }
+  address dd {
+    font-size: 16px;
+  }
+  .access__inner {
+    display: block;
+  }
+  .access__list {
+    width: 100%;
+  }
+  .access__sns {
+    padding-bottom: 5%;
+  }
   .access__map {
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
+    width: 100%;
   }
 }
 
 /* max-width: 480px
 -------------------------------------------*/
 @media screen and (max-width: 480px) {
+  .nav__list {
+    display: block;
+  }
+  .nav__list a {
+    font-size: 15px;
+    text-align: center;
+  }
   section > h2 {
     font-size: 25px;
     margin: 20px;
@@ -561,6 +572,7 @@ footer ul li:last-child a {
   }
   .form-box h3 {
     font-size: 20px;
+    margin: 40px 0;
   }
   table {
     font-size: 12px;
@@ -575,21 +587,14 @@ footer ul li:last-child a {
   input[type="submit"] {
     font-size: 14px;
     width: 100%;
+    color: #000;
+    height: 60px;
+    border-radius: 30px;
+    background: #fff;
   }
-  address dd {
-    font-size: 16px;
-  }
-  .access__inner {
-    display: block;
-  }
-  .access__list {
-    width: 100%;
-  }
-  .access__sns {
-    padding-bottom: 5%;
-  }
-  .access__map {
-    width: 100%;
+  input[type="submit"]:hover {
+    color: #000;
+    background: #fff;
   }
   footer ul li a {
     font-size: 10px;
