@@ -5,8 +5,7 @@ html {
 }
 
 body {
-  font-family: "Quicksand", sans-serif, "メイリオ", Meiryo, "ＭＳ Ｐゴシック",
-    "MS PGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka;
+  font-family: "Quicksand", sans-serif, Meiryo;
 }
 
 @mixin shadow() {
@@ -14,7 +13,7 @@ body {
 }
 
 @mixin Section {
-  padding: 10% 4%;
+  padding: 3% 4%;
 }
 
 @mixin Title {
@@ -34,7 +33,7 @@ body {
 -------------------------------------------*/
 .wrapper {
   width: 100%;
-  max-width: 1440px;
+  // max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -52,26 +51,30 @@ section>h2 {
 /* nav
 -------------------------------------------*/
 header {
-  background-color: #fff;
+  background-color: #dcd2ca;
   position: fixed;
   z-index: 100;
   width: 100%;
-  max-width: 1440px;
   height: 60px;
 }
 
 .nav__list {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
 
   a {
     display: block;
     font-size: 1.4em;
-    color: #000;
+    color: #613a3a;
+    font-weight: 900;
     line-height: 60px;
 
     &:hover {
+      cursor: pointer;
       text-decoration: underline;
+      color: #000;
     }
   }
 }
@@ -272,6 +275,15 @@ tbody {
 th {
   padding: 10px;
   width: 30%;
+  text-align: right;
+}
+
+label {
+  padding-right: 1em;
+}
+
+.label-other {
+  vertical-align: top;
 }
 
 td {
@@ -310,7 +322,7 @@ input {
     &:hover {
       cursor: pointer;
       background: #9c9c9f;
-      border: 2px solid #fff;
+      transition: background-color .8s;
       color: #fff;
     }
   }
@@ -338,7 +350,7 @@ textarea {
 
     video {
       width: 100%;
-      max-width: 622px;
+      max-width: 650px;
       height: auto;
       @include shadow();
     }
@@ -353,7 +365,10 @@ textarea {
   }
 
   &__inner {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
+    justify-content: center;
   }
 
   &__list {
@@ -408,15 +423,19 @@ hr {
 footer {
   height: 100px;
   text-align: center;
-  position: relative;
 
   .footer-nav {
     margin-bottom: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
-  ul li {
+  ul {
+    display: flex;
+  }
+
+  li {
     width: calc(100% / 3);
-    float: left;
 
     a {
       display: block;
@@ -424,17 +443,23 @@ footer {
       font-size: 0.75em;
       border-right: 1px solid #000;
       box-sizing: border-box;
+      line-height: 50px;
 
       &:hover {
-        transition-duration: 0.5s;
         color: #000;
         font-weight: bold;
+        transition-duration: .5s;
       }
     }
 
     &:last-child a {
       border-right: none;
     }
+  }
+
+  small {
+    display: inline-block;
+    padding: 40px 0;
   }
 }
 
@@ -480,6 +505,7 @@ footer {
     th {
       display: block;
       width: auto;
+      text-align: left;
     }
 
     td,
@@ -542,6 +568,10 @@ footer {
       font-size: 15px;
       text-align: center;
     }
+  }
+
+  section {
+    padding: 10% 4%;
   }
 
   section>h2 {
