@@ -33,7 +33,6 @@ body {
 -------------------------------------------*/
 .wrapper {
   width: 100%;
-  // max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -51,7 +50,8 @@ section>h2 {
 /* nav
 -------------------------------------------*/
 header {
-  background-color: #dcd2ca;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px #e0e0e3;
   position: fixed;
   z-index: 100;
   width: 100%;
@@ -67,7 +67,7 @@ header {
   a {
     display: block;
     font-size: 1.4em;
-    color: #613a3a;
+    color: #333;
     font-weight: 900;
     line-height: 60px;
 
@@ -443,7 +443,6 @@ footer {
       font-size: 0.75em;
       border-right: 1px solid #000;
       box-sizing: border-box;
-      line-height: 50px;
 
       &:hover {
         color: #000;

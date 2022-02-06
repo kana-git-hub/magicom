@@ -29,7 +29,9 @@ section > h2 {
 /* nav
 -------------------------------------------*/
 header {
-  background-color: #dcd2ca;
+  background-color: #fff;
+  -webkit-box-shadow: 1px 1px 4px #e0e0e3;
+          box-shadow: 1px 1px 4px #e0e0e3;
   position: fixed;
   z-index: 100;
   width: 100%;
@@ -49,7 +51,7 @@ header {
 .nav__list a {
   display: block;
   font-size: 1.4em;
-  color: #613a3a;
+  color: #333;
   font-weight: 900;
   line-height: 60px;
 }
@@ -456,7 +458,6 @@ footer li a {
   border-right: 1px solid #000;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  line-height: 50px;
 }
 
 footer li a:hover {
